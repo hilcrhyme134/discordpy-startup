@@ -2,7 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='＄')
+bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -15,8 +15,8 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
     
-@bot.command(name="ゾラ・マグダラオス")
-async def ZorahMagdaros(ctx):
+@bot.command
+async def ゾラ・マグダラオス(ctx):
     embed = discord.Embed(title="ゾラ・マグダラオス", color=0xff3300)
     embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/e3KTLkU4xuFllQQUjAXezCEW1MDmN08eZGjfQE_-yU4/https/monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/Zorah-Magdaros-mhw-Icon-small.png")
     embed.add_field(name="属性", value=":fire:火", inline=True)
